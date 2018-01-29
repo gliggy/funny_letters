@@ -7,7 +7,8 @@ var blue = [196, 77, 55];
 var purple = [280, 50, 60];
 var letterColors = [red, orange, green, blue, purple];
 
-drawName(myName, letterColors);
+$("#namey").change(function(){
+drawName($("#namey").val(), letterColors);
 
 if(10 < 3)
 {
@@ -19,3 +20,4 @@ else
 }
 
 bounceBubbles();
+});
