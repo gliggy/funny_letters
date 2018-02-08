@@ -112,7 +112,7 @@ function Point(x, y, z, size, color) {
         this.radius = this.size * this.curPos.z;
         if (this.radius < 1) this.radius = 1;
     };
- 
+ // There should be an option on the page for hearts or bubbles //
     this.draw = function (bubbleShape, dx, dy) {
         ctx.fillStyle = this.color;
         if (bubbleShape == "square") {
