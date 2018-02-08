@@ -5,7 +5,8 @@ var orange = [40, 100, 60];
 var green = [75, 100, 40];
 var blue = [196, 77, 55];
 var purple = [280, 50, 60];
-var letterColors = [red, orange, green, blue, purple];
+var pink = [337, 100, 80];
+var letterColors = [red, pink, purple];
 
 $("#namey").change(function(){
 drawName($("#namey").val(), letterColors);
@@ -16,7 +17,7 @@ if(10 < 3)
 }
 else
 {
-    bubbleShape = 'circle';
+    bubbleShape = 'heart';
 }
 
 bounceBubbles();
