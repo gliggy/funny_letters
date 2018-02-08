@@ -119,6 +119,8 @@ function Point(x, y, z, size, color) {
             ctx.beginPath();
             ctx.fillRect(this.curPos.x + dx, this.curPos.y + dy, this.radius * 1.5, this.radius * 1.5);
         } else if (bubbleShape == "heart") {
+		ctx.strokeStyle = "#000000";
+		
 		var x = this.curPos.x + dx;
 		var y = this.curPos.y + dy;
 		var r = this.radius / 40;
@@ -133,6 +135,7 @@ function Point(x, y, z, size, color) {
     		ctx.bezierCurveTo(x+130*r, y+62.5*r, x+130*r, y+25*r, x+100*r, y+25*r);
     		ctx.bezierCurveTo(x+85*r, y+25*r, x+75*r, y+37*r, x+75*r, y+40*r);
     		ctx.fill();
+		ctx.stroke();
         } else {
             ctx.beginPath();
             ctx.arc(this.curPos.x + dx, this.curPos.y + dy, this.radius, 0, Math.PI * 2, true);
