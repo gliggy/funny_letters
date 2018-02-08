@@ -17,7 +17,7 @@ if(10 < 3)
 }
 else
 {
-    bubbleShape = 'heart';
+    bubbleShape = 'heart'; // This should be a variable (heart or circle). //
 }
 
 bounceBubbles();
