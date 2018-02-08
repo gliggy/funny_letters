@@ -121,14 +121,17 @@ function Point(x, y, z, size, color) {
         } else if (bubbleShape == "heart") {
 		var x = this.curPos.x + dx;
 		var y = this.curPos.y + dy;
+		var r = this.radius / 40;
+		x -= 75 * r;
+		y -= 75 * r; 
     		ctx.beginPath();
-    		ctx.moveTo(x+75, y+40);
-    		ctx.bezierCurveTo(x+75, y+37, x+70, y+25, x+50, y+25);
-    		ctx.bezierCurveTo(x+20, y+25, x+20, y+62.5, x+20, y+62.5);
-    		ctx.bezierCurveTo(x+20, y+80, x+40, y+102, x+75, y+120);
-    		ctx.bezierCurveTo(x+110, y+102, x+130, y+80, x+130, y+62.5);
-    		ctx.bezierCurveTo(x+130, y+62.5, x+130, y+25, x+100, y+25);
-    		ctx.bezierCurveTo(x+85, y+25, x+75, y+37, x+75, y+40);
+    		ctx.moveTo(x+75*r, y+40*r);
+    		ctx.bezierCurveTo(x+75*r, y+37*r, x+70*r, y+25*r, x+50*r, y+25*r);
+    		ctx.bezierCurveTo(x+20*r, y+25*r, x+20*r, y+62.5*r, x+20*r, y+62.5*r);
+    		ctx.bezierCurveTo(x+20*r, y+80*r, x+40*r, y+102*r, x+75*r, y+120*r);
+    		ctx.bezierCurveTo(x+110*r, y+102*r, x+130*r, y+80*r, x+130*r, y+62.5*r);
+    		ctx.bezierCurveTo(x+130*r, y+62.5*r, x+130*r, y+25*r, x+100*r, y+25*r);
+    		ctx.bezierCurveTo(x+85*r, y+25*r, x+75*r, y+37*r, x+75*r, y+40*r);
     		ctx.fill();
         } else {
             ctx.beginPath();
@@ -142,7 +145,8 @@ function makeColor(hslList, fade) {
     var hue = hslList[0] /*- 17.0 * fade / 1000.0*/ ;
     var sat = hslList[1] /*+ 81.0 * fade / 1000.0*/ ;
     var lgt = hslList[2] /*+ 58.0 * fade / 1000.0*/ ;
-    return "hsl(" + hue + "," + sat + "%," + lgt + "%)";
+    var result = "hsl(" + hue + "," + sat + "%," + lgt + "%)";
+    return result;
 }
  
 function phraseToHex(phrase) {
