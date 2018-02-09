@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
 <style>
+html, body {
+  width: 100%;
+  }
 body{
 background-color: Pink;
 }
+  #overlay {
+    z-index: 3000;
+    position: absolute;
+    width: 100%;
+  }
   #namey {
    display: block;
     width: 200px;
@@ -15,7 +23,9 @@ background-color: Pink;
     <script type="text/javascript" src="alphabet.js"></script>
   </head>
   <body>
-    <input type="text" id="namey" style="z-index: 3000; position: absolute;" placeholder="Enter your name." />
+    <div id="overlay">
+      <input type="text" id="namey" placeholder="Enter your name." />
+    </div>
     <canvas id="myCanvas"></canvas>
     <script type="text/javascript" src="hearts.js"></script>
     <script type="text/javascript" src="funny_name.js"></script>
