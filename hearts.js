@@ -165,21 +165,24 @@ function initEventListeners() {
  
     canvas.ontouchmove = function (e) {
         e.preventDefault();
+ 
         onTouchMove(e);
     };
- 
     canvas.ontouchstart = function (e) {
         e.preventDefault();
     };
 }
  
 function updateCanvasDimensions() {
-    canvas.attr({
-        height: 1000,
-        width: 1000
-    });
-    canvasWidth = canvas.width();
-    canvasHeight = canvas.height();
+    //canvas.attr({
+      //  height: 1000,
+        //width: 1000
+    //});
+    //canvasWidth = canvas.width();
+    //canvasHeight = canvas.height();
+    canvasWidth = canvas[0].width = window.innerWidth;
+    canvasHeight = canvas[0].height = window.innerHeight;
+    console.log(canvasWidth, canvasHeight, "daddy has a big nose!");
     draw();
 }
  
@@ -296,6 +299,7 @@ function drawName(name, letterColors) {
         g[j].curPos.y = (canvasHeight / 2 - 105) + g[j].curPos.y;
         g[j].originalPos.x = (canvasWidth / 2 - offset / 2) + g[j].originalPos.x;
         g[j].originalPos.y = (canvasHeight / 2 - 105) + g[j].originalPos.y;
+	console.log(j, g[j].curPos);
     }
  
     pointCollection = new PointCollection();
