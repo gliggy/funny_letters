@@ -193,7 +193,6 @@ function onMove(e) {
 }
  
 function onTouchMove(e) {
-    console.log("TOUCHING!", e);
     e = e.originalEvent;
     if (pointCollection) {
         pointCollection.mousePos.set(e.targetTouches[0].pageX - canvas.offset().left, e.targetTouches[0].pageY - canvas.offset().top);
@@ -301,7 +300,6 @@ function drawName(name, letterColors) {
         g[j].curPos.y = (canvasHeight / 2 - 105) + g[j].curPos.y;
         g[j].originalPos.x = (canvasWidth / 2 - offset / 2) + g[j].originalPos.x;
         g[j].originalPos.y = (canvasHeight / 2 - 105) + g[j].originalPos.y;
-	console.log(j, g[j].curPos);
     }
  
     pointCollection = new PointCollection();
