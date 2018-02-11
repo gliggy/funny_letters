@@ -37,8 +37,14 @@ if (location.search) {
 }
 var person = params.person;
 if (person) {
-document.getElementById("namey").value = person;
-drawName(person, letterColors);
-bubbleShape = "heart";
+function go() {
+$("#namey").val(person);
+$("#namey").trigger("change");
+console.log("DRAWING NOW");
+//drawName(person, letterColors);
+//bubbleShape = "heart";
+}
+console.log("HELLO");
+setTimeout(go, 1000);
 }
 
