@@ -163,14 +163,14 @@ function phraseToHex(phrase) {
 function initEventListeners() {
     $(window).bind('resize', updateCanvasDimensions).bind('mousemove', onMove);
  
-    canvas.ontouchmove = function (e) {
+    canvas.bind('touchmove', function (e) {
         e.preventDefault();
  
         onTouchMove(e);
-    };
-    canvas.ontouchstart = function (e) {
+    });
+    canvas.bind('touchstart', function (e) {
         e.preventDefault();
-    };
+    });
 }
  
 function updateCanvasDimensions() {
@@ -193,6 +193,8 @@ function onMove(e) {
 }
  
 function onTouchMove(e) {
+    console.log("TOUCHING!", e);
+    e = e.originalEvent;
     if (pointCollection) {
         pointCollection.mousePos.set(e.targetTouches[0].pageX - canvas.offset().left, e.targetTouches[0].pageY - canvas.offset().top);
     }

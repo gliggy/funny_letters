@@ -22,3 +22,23 @@ else
 
 bounceBubbles();
 });
+
+var params = {};
+if (location.search) {
+    var parts = location.search.substring(1).split('&');
+
+    for (var i = 0; i < parts.length; i++) {
+        var nv = parts[i].split('=');
+        if (!nv[0]) continue;
+        nv[1] = nv[1].replace(/[^a-z]/i,'');
+        nv[1] = nv[1].toLowerCase();
+        params[nv[0]] = nv[1] || true;
+    }
+}
+var person = params.person;
+if (person) {
+document.getElementById("namey").value = person;
+drawName(person, letterColors);
+bubbleShape = "heart";
+}
+
