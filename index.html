@@ -27,17 +27,29 @@ background-color: Pink;
     position: absolute;
     width: 100%;
   }
-  #namey {
+  #overlay2 {
+   width: 350px;
    display: block;
-    width: 400px;
     margin: 0 auto;
+  }
+  #namey {
+    width: 300px;
+    font-size: 200%;
+  }
+  #shapey {
     font-size: 200%;
   }
 </style>
   </head>
   <body>
     <div id="overlay">
-      <input type="text" id="namey" placeholder="Enter your name." autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+      <div id="overlay2">
+      <input type="text" id="namey" placeholder="Enter your name." autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" /><select id="shapey">
+          <option value="heart">&hearts;</option>
+          <option value="circle">&#9679;</option>
+          <option value="square">&#9632;</option>
+	</select>
+      </div>
     </div>
     <canvas id="myCanvas"></canvas>
     <script type="text/javascript" src="hearts.js"></script>

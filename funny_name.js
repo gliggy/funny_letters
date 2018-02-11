@@ -8,15 +8,22 @@ var purple = [280, 50, 60];
 var pink = [337, 100, 80];
 var letterColors = [red, pink, purple];
 
-function writeName(name) {
-  console.log("DRAWING", name, letterColors	);
+var defaultName = "yay!";
+
+function writeName() {
+  var name = $("#namey").val() || defaultName;
+  bubbleShape = $("#shapey").val(); //'heart'; // This should be a variable (heart or circle). //
+  console.log("DRAWING", name, letterColors, bubbleShape);
   drawName(name, letterColors);
-  bubbleShape = 'heart'; // This should be a variable (heart or circle). //
   bounceBubbles();
 }
 
 $("#namey").change(function(){
-  writeName($("#namey").val());
+  writeName();
+});
+
+$("#shapey").change(function(){
+  writeName();
 });
 
 var params = {};
@@ -33,9 +40,10 @@ if (location.search) {
 }
 var person = params.person;
 if (person) {
+  defaultName = person;
   function go() {
     $("#namey").attr({placeholder: person});
-    writeName(person); 
+    writeName(); 
     console.log("DRAWING NOW");
   }
   console.log("HELLO");
