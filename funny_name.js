@@ -12,7 +12,7 @@ var defaultName = "yay!";
 
 function writeName() {
   var name = $("#namey").val() || defaultName;
-  bubbleShape = $("#shapey").val(); //'heart'; // This should be a variable (heart or circle). //
+  bubbleShape = $("#shapey").val(); 
   console.log("DRAWING", name, letterColors, bubbleShape);
   drawName(name, letterColors);
   bounceBubbles();
