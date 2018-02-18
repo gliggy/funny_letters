@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="alphabet.js"></script>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    width: 100vw;
+    height: 100vh;
+  }
+  canvas {
+    display: block;
+    overflow: hidden;
+  }
+body{
+background-color: Pink;
+}
+  #overlay {
+    z-index: 3000;
+    position: absolute;
+    width: 100%;
+  }
+  #overlay2 {
+   width: 350px;
+   display: block;
+    margin: 0 auto;
+  }
+  #namey {
+    width: 300px;
+    font-size: 200%;
+  }
+  #shapey {
+    font-size: 200%;
+  }
+</style>
+  </head>
+  <body>
+    <div id="overlay">
+      <div id="overlay2">
+      <input type="text" id="namey" placeholder="Enter your name." autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" /><select id="shapey">
+          <option value="heart">&hearts;</option>
+          <option value="circle">&#9679;</option>
+          <option value="square">&#9632;</option>
+	</select>
+      </div>
+    </div>
+    <canvas id="myCanvas"></canvas>
+    <script type="text/javascript" src="hearts.js"></script>
+    <script type="text/javascript" src="funny_name.js"></script>
+
+  </body>
+</html>
