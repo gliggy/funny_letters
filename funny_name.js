@@ -16,6 +16,7 @@ function writeName() {
   console.log("DRAWING", name, letterColors, bubbleShape);
   drawName(name, letterColors);
   bounceBubbles();
+  $('#videoLink a').attr('href', 'https://gliggy.github.io/rect_in_lava/?name=' + name);
 }
 
 $("#namey").change(function(){
