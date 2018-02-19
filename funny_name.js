@@ -12,7 +12,7 @@ var defaultName = "yay!";
 
 function writeName() {
   var name = $("#namey").val() || defaultName;
-  bubbleShape = $("#shapey").val(); //'heart'; // This should be a variable (heart or circle). //
+  bubbleShape = $("#shapey").val(); 
   console.log("DRAWING", name, letterColors, bubbleShape);
   drawName(name, letterColors);
   bounceBubbles();
@@ -34,7 +34,7 @@ if (location.search) {
     for (var i = 0; i < parts.length; i++) {
         var nv = parts[i].split('=');
         if (!nv[0]) continue;
-        nv[1] = nv[1].replace(/[^a-z]/i,'');
+        nv[1] = nv[1].replace(/[^a-z.]/i,'');
         nv[1] = nv[1].toLowerCase();
         params[nv[0]] = nv[1] || true;
     }
