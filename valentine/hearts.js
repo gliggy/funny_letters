@@ -182,7 +182,7 @@ function updateCanvasDimensions() {
     //canvasHeight = canvas.height();
     canvasWidth = canvas[0].width = window.innerWidth;
     canvasHeight = canvas[0].height = window.innerHeight;
-    console.log(canvasWidth, canvasHeight, "daddy has an average sized nose!");
+    console.log(canvasWidth, canvasHeight, "daddy has a big nose!");
     draw();
 }
  

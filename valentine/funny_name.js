@@ -6,7 +6,7 @@ var green = [75, 100, 40];
 var blue = [196, 77, 55];
 var purple = [280, 50, 60];
 var pink = [337, 100, 80];
-var letterColors = [red, orange, green, blue, purple];
+var letterColors = [red, pink, purple];
 
 var defaultName = "yay!";
 

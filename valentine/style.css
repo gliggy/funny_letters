@@ -1,0 +1,32 @@
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    width: 100vw;
+    height: 100vh;
+  }
+  canvas {
+    display: block;
+    overflow: hidden;
+  }
+body{
+background-color: Pink;
+}
+  #overlay {
+    z-index: 3000;
+    position: absolute;
+    width: 100%;
+  }
+  #overlay2 {
+   width: 350px;
+   display: block;
+    margin: 0 auto;
+  }
+  #namey {
+    width: 300px;
+    font-size: 200%;
+  }
+  #shapey {
+    font-size: 200%;
+  }
