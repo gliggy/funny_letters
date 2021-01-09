@@ -1,5 +1,4 @@
 var myName = "Leo";
-console.log(window.location.search);
 
 var red = [0, 100, 63];
 var orange = [40, 100, 60];
@@ -69,7 +68,7 @@ $("#shapey").change(function(){
 //});
 
 
-$("#style").live(('change', function()) {
+$("#style").live('change', function() {
   if ($(this).val() == 'rainbow'){
       writeName(rainbow);
   } else if ($(this).val() == 'enby') {
