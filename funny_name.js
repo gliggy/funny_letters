@@ -12,7 +12,7 @@ var white = [255, 255, 255];
 var grey = [128, 128, 128];
 
 // themes
-var theme = document.getElementById("style").value; 
+var theme = document.getElementById("style").value;
 console.log(theme);
 var rainbow = [red, orange, green, blue, purple];
 var enby = [orange, white, purple, black];
@@ -49,7 +49,7 @@ function writeName(colors) {
   } else {
     colors = rainbow;
   }
-  bubbleShape = $("#shapey").val(); 
+  bubbleShape = $("#shapey").val();
   //console.log("DRAWING", name, letterColors, bubbleShape);
   drawName(name, colors);
   bounceBubbles();
@@ -69,7 +69,7 @@ $("#shapey").change(function(){
 //});
 
 
-$("#style").live('change', function() {
+$("#style").live(('change', function()) {
   if ($(this).val() == 'rainbow'){
       writeName(rainbow);
   } else if ($(this).val() == 'enby') {
@@ -81,11 +81,11 @@ $("#style").live('change', function() {
   } else {
       writeName([0, 0, 0])
   }
-}); 
+});
 
 $(document).ready(function() {
   $('#style').change(function() {
-    var colors = ($(this).val());  
+    var colors = ($(this).val());
     writeName(colors);
   });
 });
@@ -107,7 +107,7 @@ if (person) {
   defaultName = person;
   function go() {
     $("#namey").attr({placeholder: person});
-    writeName(); 
+    writeName();
     console.log("DRAWING NOW");
   }
   //console.log("HELLO");
@@ -126,3 +126,6 @@ if (paramColors) {
 }
 
 //Daddy has a big nose, and it is very big!
+//by: Leo!
+
+
