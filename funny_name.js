@@ -15,7 +15,7 @@ var theme = document.getElementById("style").value;
 console.log(theme);
 var rainbow = [red, orange, green, blue, purple, black];
 var enby = [orange, white, purple, black];
-var valentine = [red, purple, pink];
+var valentine = [red, pink, purple];
 var trans = [blue, pink, white, pink, blue];
 letterColors = [];
 
@@ -23,8 +23,12 @@ if (theme == "rainbow") {
   letterColors = rainbow;
 } else if (theme == "enby") {
   letterColors = enby;
+} else if (theme == "valentine") {
+  letterColors = valentine;
+} else if (theme == "trans") {
+  letterColors = trans;
 } else {
-  letterColors = rainbow;
+  letterColors = [0, 0, 0];
 }
 
 var defaultName = "yay!";
