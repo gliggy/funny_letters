@@ -116,16 +116,20 @@ function Point(x, y, z, size, color) {
     this.draw = function (bubbleShape, dx, dy) {
         ctx.fillStyle = this.color;
         if (bubbleShape == "square") {
+            ctx.strokeStyle = "#000000";
             ctx.beginPath();
+            ctx.strokeRect(this.curPos.x + dx, this.curPos.y + dy, this.radius * 1.5, this.radius * 1.5);
             ctx.fillRect(this.curPos.x + dx, this.curPos.y + dy, this.radius * 1.5, this.radius * 1.5);
+
+            ctx.stroke();
         } else if (bubbleShape == "heart") {
-		ctx.strokeStyle = "#000000";
+		    ctx.strokeStyle = "#000000";
 		
-		var x = this.curPos.x + dx;
-		var y = this.curPos.y + dy;
-		var r = this.radius / 40;
-		x -= 75 * r;
-		y -= 75 * r; 
+		    var x = this.curPos.x + dx;
+		    var y = this.curPos.y + dy;
+		    var r = this.radius / 40;
+		    x -= 75 * r;
+		    y -= 75 * r; 
     		ctx.beginPath();
     		ctx.moveTo(x+75*r, y+40*r);
     		ctx.bezierCurveTo(x+75*r, y+37*r, x+70*r, y+25*r, x+50*r, y+25*r);
@@ -135,11 +139,13 @@ function Point(x, y, z, size, color) {
     		ctx.bezierCurveTo(x+130*r, y+62.5*r, x+130*r, y+25*r, x+100*r, y+25*r);
     		ctx.bezierCurveTo(x+85*r, y+25*r, x+75*r, y+37*r, x+75*r, y+40*r);
     		ctx.fill();
-		ctx.stroke();
+		    ctx.stroke();
         } else {
+            ctx.strokeStyle = "#000000";
             ctx.beginPath();
             ctx.arc(this.curPos.x + dx, this.curPos.y + dy, this.radius, 0, Math.PI * 2, true);
             ctx.fill();
+            ctx.stroke();
         }
     };
 }

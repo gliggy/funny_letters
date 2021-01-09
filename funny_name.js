@@ -16,7 +16,8 @@ console.log(theme);
 var rainbow = [red, orange, green, blue, purple];
 var enby = [orange, white, purple, black];
 var valentine = [red, pink, purple];
-var trans = [blue, pink, white, pink, blue];
+var trans = [blue, pink, white, pink, blue, white];
+var ace = [black, grey, white, purple];
 letterColors = [];
 
 if (theme == "rainbow") {
