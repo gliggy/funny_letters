@@ -13,7 +13,7 @@ var grey = [128, 128, 128];
 // themes
 var theme = document.getElementById("style").value; 
 console.log(theme);
-var rainbow = [red, orange, green, blue, purple, black];
+var rainbow = [red, orange, green, blue, purple];
 var enby = [orange, white, purple, black];
 var valentine = [red, pink, purple];
 var trans = [blue, pink, white, pink, blue];
