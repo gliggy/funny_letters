@@ -20,7 +20,7 @@ var trans = [blue, pink, white, pink, blue, white];
 var ace = [black, grey, white, purple];
 var letterColors = [];
 
-/*
+
 if (theme == "rainbow") {
   letterColors = rainbow;
 } else if (theme == "enby") {
@@ -31,7 +31,7 @@ if (theme == "rainbow") {
   letterColors = trans;
 } else {
   letterColors = [0, 0, 0];
-} */
+} 
 
 var defaultName = "yay!";
 
@@ -68,7 +68,7 @@ $("#shapey").change(function(){
 //});
 
 
-$("#style").live('change', function() {
+$("#style").on('change', function() {
   if ($(this).val() == 'rainbow'){
       writeName(rainbow);
   } else if ($(this).val() == 'enby') {
