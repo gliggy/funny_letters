@@ -6,14 +6,23 @@ var green = [75, 100, 40];
 var blue = [196, 77, 55];
 var purple = [280, 50, 60];
 var pink = [337, 100, 80];
-var letterColors = [red, orange, green, blue, purple];
+var black = [0, 0, 0];
+var white = [255, 255, 255];
+var grey = [128, 128, 128];
+
+// themes
+var theme = document.getElementById("style"); 
+var rainbow = [red, orange, green, blue, purple];
+var enby = [orange, white, purple, black];
+var valentine = [red, purple, pink];
+var trans = [blue, pink, white, pink, blue];
 
 var defaultName = "yay!";
 
 function writeName() {
   var name = $("#namey").val() || defaultName;
   bubbleShape = $("#shapey").val(); 
-  console.log("DRAWING", name, letterColors, bubbleShape);
+  //console.log("DRAWING", name, letterColors, bubbleShape);
   drawName(name, letterColors);
   bounceBubbles();
   $('#videoLink a').attr('href', 'https://gliggy.github.io/rect_in_lava/?person=' + name);

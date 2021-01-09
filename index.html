@@ -11,17 +11,28 @@
   <body>
     <div id="overlay">
       <div id="overlay2">
-      <input type="text" id="namey" placeholder="Enter your name." autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" /><select id="shapey">
+        <input type="text" id="namey" placeholder="Enter your name." autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+        <select id="shapey">
           <option value="heart">&hearts;</option>
           <option value="circle">&#9679;</option><!-- the circle, square, and star should be outlined. -->
           <option value="square">&#9632;</option>
-     <!-- <option value="star">&#x2605;</option> -->
-	</select>
-	      <a id="videoLink" href="https://gliggy.github.io/rect_in_lava/">Video game</a>
+          <!-- <option value="star">&#x2605;</option> -->
+        </select>
+        <label for="style">Choose the colors:</label>
+        <select id="style">
+          <option value="rainbow">rainbow</option>
+          <option value="enby">enby</option>
+          <option value="valentine">valentine</option>
+          <option value="trans">trans</option>
+        </select>
+        <div>
+          <a href="https://gliggy.github.io/funny_letters/valentine">Valentiney Version</a>
+          <a id="videoLink" href="https://gliggy.github.io/rect_in_lava/">Video game</a>
+        </div>
       </div>
     </div>
     <canvas id="myCanvas"></canvas>
-    <script type="text/javascript" src="hearts.js"></script>
+    <script type="text/javascript" src="shapes.js"></script>
     <script type="text/javascript" src="funny_name.js"></script>
 
   </body>
