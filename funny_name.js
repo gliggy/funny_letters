@@ -11,11 +11,21 @@ var white = [255, 255, 255];
 var grey = [128, 128, 128];
 
 // themes
-var theme = document.getElementById("style"); 
-var rainbow = [red, orange, green, blue, purple];
+var theme = document.getElementById("style").value; 
+console.log(theme);
+var rainbow = [red, orange, green, blue, purple, black];
 var enby = [orange, white, purple, black];
 var valentine = [red, purple, pink];
 var trans = [blue, pink, white, pink, blue];
+letterColors = [];
+
+if (theme == "rainbow") {
+  letterColors = rainbow;
+} else if (theme == "enby") {
+  letterColors = enby;
+} else {
+  letterColors = rainbow;
+}
 
 var defaultName = "yay!";
 

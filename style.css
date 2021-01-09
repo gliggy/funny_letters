@@ -19,19 +19,19 @@ background-color: lightyellow;
   width: 100%;
 }
 #overlay2 {
- width: 500px;
+ width: 430px;
  display: block;
   margin: 0 auto;
 }
 #namey {
   width: 300px;
-  font-size: 200%;
+  font-size: 120%;
 }
 #shapey {
-  font-size: 200%;
+  font-size: 120%;
 }
 
 a, a:visited {
-  font-size: 200%;
+  font-size: 120%;
   color: green;
 }
