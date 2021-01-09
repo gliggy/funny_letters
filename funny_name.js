@@ -112,3 +112,14 @@ if (person) {
   setTimeout(go, 1000);
 }
 
+var paramColors = params.style;
+if (paramColors) {
+  letterColors = paramColors;
+  function go() {
+    $("#style").val(letterColors);
+    writeName(letterColors);
+    console.log(paramColors);
+  }
+  setTimeout(go, 1000);
+}
+
