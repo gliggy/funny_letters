@@ -123,3 +123,4 @@ if (paramColors) {
   setTimeout(go, 1000);
 }
 
+//Daddy has a big nose, and it is very big!
