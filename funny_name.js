@@ -18,7 +18,7 @@ var enby = [orange, white, purple, black];
 var valentine = [red, pink, purple];
 var trans = [blue, pink, white, pink, blue, white];
 var ace = [black, grey, white, purple];
-letterColors = [];
+var letterColors = [];
 
 if (theme == "rainbow") {
   letterColors = rainbow;
@@ -34,21 +34,58 @@ if (theme == "rainbow") {
 
 var defaultName = "yay!";
 
-function writeName() {
+function writeName(colors) {
   var name = $("#namey").val() || defaultName;
+  if (colors == "rainbow") {
+    colors = rainbow;
+  } else if (colors == "enby") {
+    colors = enby;
+  } else if (colors == "valentine") {
+    colors = valentine;
+  } else if (colors == "trans") {
+    colors = trans;
+  } else {
+    colors = rainbow;
+  }
   bubbleShape = $("#shapey").val(); 
   //console.log("DRAWING", name, letterColors, bubbleShape);
-  drawName(name, letterColors);
+  drawName(name, colors);
   bounceBubbles();
-  $('#videoLink a').attr('href', 'https://gliggy.github.io/rect_in_lava/?person=' + name);
+  //$('#videoLink a').attr('href', 'https://gliggy.github.io/rect_in_lava/?person=' + name);
 }
 
 $("#namey").change(function(){
-  writeName();
+  writeName(letterColors);
 });
 
 $("#shapey").change(function(){
-  writeName();
+  writeName(letterColors);
+});
+
+//$("#style").change(function(){
+//  writeName(letterColors);
+//});
+
+/*
+$("#style").live('change', function() {
+  if ($(this).val() == 'rainbow'){
+      writeName(rainbow);
+  } else if ($(this).val() == 'enby') {
+      writeName(enby);
+  } else if ($(this).val() == 'trans') {
+      writeName(trans);
+  } else if ($(this).val() == 'valentine') {
+      writeName(valentine);
+  } else {
+      writeName([0, 0, 0])
+  }
+}); */
+
+$(document).ready(function() {
+  $('#style').change(function() {
+    var colors = ($(this).val());  
+    writeName(colors);
+  });
 });
 
 var params = {};
