@@ -20,6 +20,7 @@ var trans = [blue, pink, white, pink, blue, white];
 var ace = [black, grey, white, purple];
 var letterColors = [];
 
+/*
 if (theme == "rainbow") {
   letterColors = rainbow;
 } else if (theme == "enby") {
@@ -30,7 +31,7 @@ if (theme == "rainbow") {
   letterColors = trans;
 } else {
   letterColors = [0, 0, 0];
-}
+} */
 
 var defaultName = "yay!";
 
@@ -66,7 +67,7 @@ $("#shapey").change(function(){
 //  writeName(letterColors);
 //});
 
-/*
+
 $("#style").live('change', function() {
   if ($(this).val() == 'rainbow'){
       writeName(rainbow);
@@ -79,7 +80,7 @@ $("#style").live('change', function() {
   } else {
       writeName([0, 0, 0])
   }
-}); */
+}); 
 
 $(document).ready(function() {
   $('#style').change(function() {
@@ -108,7 +109,7 @@ if (person) {
     writeName(); 
     console.log("DRAWING NOW");
   }
-  console.log("HELLO");
+  //console.log("HELLO");
   setTimeout(go, 1000);
 }
 
